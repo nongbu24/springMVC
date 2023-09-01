@@ -1,6 +1,3 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="myHello" class="ch03_pjt_exam1.MyHello"/>
-	<bean id="helloAssembler" class="ch03_pjt_exam1.HelloAssembler">
-		<constructor-arg ref="myHello"/>
-	</bean>
+	<bean id="gt" class="ch03_pjt_exam01.Greeting"/>
 </beans>
