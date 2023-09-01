@@ -1,4 +1,4 @@
-package ch03_pjt_03;
+package ch03_pjt_exam01;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -8,9 +8,9 @@ public class MainClass {
 		GenericXmlApplicationContext ctx =
 				new GenericXmlApplicationContext("classpath:applicationContext.xml");
 		
-		CalAssembler calAssembler =
-				ctx.getBean("calAssembler", CalAssembler.class);
-		calAssembler.assemble();
+		HelloAssembler helloAssembler =
+				ctx.getBean("helloAssembler", HelloAssembler.class);
+		helloAssembler.assemble();
 		
 		ctx.close();
 	}
