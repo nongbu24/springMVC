@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="EMSInformationService"
+		class="ch04_pjt_01.ems.member.service.EMSInformationService">
+		<property name = "info">
+			<value>Education Management System program was developed in 2022.</value>
+		</property>
+		<property name="copyRight"
+			value="COPYRIGHT(C) 2022 EMS CO.LTD.ALL RIGHT RESERVED.CONTACT MASTER FOR MORE INFORMATION." />
+		<property name="ver" value="The version is 1.0" />
+		<property name="sYear">
+			<value>2022</value>
+		</property>
+		<property name = "sMonth">
+			<value>3</value>
+		</property>
+		<property name="sDay">
+			<value>1</value>
+		</property>
+		<property name="eYear">
+			<value>2022</value>
+		</property>
+		<property name="eMonth">
+			<value>4</value>
+		</property>
+		<property name="eDay">
+			<value>30</value>
+		</property>
+	</bean>
+</beans>

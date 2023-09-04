@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="dev_DBConnectionInfoDev"
+		class="ch04_pjt_01.ems.member.DBConnectionInfo">
+		<property name="url" value="000.000.000.000" />
+		<property name="userId" value="admin" />
+		<property name="userPw" value="0000" />	
+	</bean>
+	<bean id="real_DBConnectionInfo"
+		class="ch04_pjt_01.ems.member.DBConnectionInfo">
+		<property name="url" value="111.111.111.111" />
+		<property name="userId" value="master" />
+		<property name="userPw" value="1111" />
+	</bean>	<!-- 얘네를 사용하려면 게터세터가 무조건 있어야함 설정이 안되어있으면 사용할 수 없음 -->
+</beans>

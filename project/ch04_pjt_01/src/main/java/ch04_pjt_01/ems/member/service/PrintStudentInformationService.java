@@ -6,10 +6,10 @@ import java.util.Set;
 
 import ch04_pjt_01.ems.member.Student;
 
-public class PrintStudentInfomationService {
+public class PrintStudentInformationService {
 	StudentAllSelectService allSelectService;
 	
-	public PrintStudentInfomationService(StudentAllSelectService allSelectService) {
+	public PrintStudentInformationService(StudentAllSelectService allSelectService) {
 		this.allSelectService = allSelectService;
 	}
 	
