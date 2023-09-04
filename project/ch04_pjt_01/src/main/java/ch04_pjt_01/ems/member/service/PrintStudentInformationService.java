@@ -28,7 +28,7 @@ public class PrintStudentInformationService {
 			System.out.println("| sName : " + student.getsName() + "\t");
 			System.out.println("| sAge : " + student.getsAge() + "\t");
 			System.out.println("| sGender : " + student.getsGender() + "\t");
-			System.out.println("| sMajor : " + student.getsGender() + "\t");
+			System.out.println("| sMajor : " + student.getsMajor() + "\t");
 		}
 		System.out.println("END ----------");
 	}

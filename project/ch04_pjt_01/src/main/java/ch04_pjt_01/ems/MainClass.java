@@ -12,18 +12,9 @@ import ch04_pjt_01.ems.member.service.StudentSelectService;
 import ch04_pjt_01.ems.utils.InitSampleData;
 
 public class MainClass {
-
+	
 	public static void main(String[] args) {
-		String[] appCtxs = {"classpath:appCtx1.xml",
-							"classpath:appCtx2.xml",
-							"classpath:appCtx3.xml"};
-		
-		GenericXmlApplicationContext ctx =
-				new GenericXmlApplicationContext(appCtxs);
-		// 이렇게 길면 보기가 어렵기 때문에 일반적으로 배열 형태로 파일을 저장해준다.
-		
-		ctx = new GenericXmlApplicationContext("classpath:appCtxImport.xml");
-		// 임포트 해줬으니까 괜찮다 (?) 위나 아래 둘 중에 하나로 쓰면 된다고 하심
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationContext.xml");
 		
 		InitSampleData initSampleData = ctx.getBean("initSampleData", InitSampleData.class);
 		String[] sNums = initSampleData.getsNums();
