@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="initSampleData"
+		class="ch04_pjt_exam01.ems.utils.InitSampleData">
+		<property name="mNums">
+			<array>
+				<value>pjw0001</value>
+			</array>
+		</property>
+		<property name="mIds">
+			<array>
+				<value>dragon</value>
+			</array>
+		</property>
+		<property name="mPws">
+			<array>
+				<value>p0001</value>
+			</array>
+		</property>
+		<property name="mHps">
+			<array>
+				<value>010-8888-8888</value>
+			</array>
+		</property>
+		<property name="mEmails">
+			<array>
+				<value>pop@naver.org</value>
+			</array>
+		</property>
+		<property name="newDate">
+			<array>
+				<value>2023-05-03</value>
+			</array>
+		</property>
+		<property name="lastDate">
+			<array>
+				<value>2023-09-05</value>
+			</array>
+		</property>
+	</bean>
+	<bean id="memberDAO"
+		class="ch04_pjt_exam01.ems.member.dao.MemberDAO" />
+	<bean id="memberRegisterService"
+		class="ch04_pjt_exam01.ems.member.service.MemberRegisterService">
+		<constructor-arg ref="memberDAO" />	
+	</bean>
+	<bean id="memberModifyService"
+		class="ch04_pjt_exam01.ems.member.service.MemberModifyService">
+		<constructor-arg ref="memberDAO" />	
+	</bean>
+	<bean id="memberDeleteService"
+		class="ch04_pjt_exam01.ems.member.service.MemberDeleteService">
+		<constructor-arg ref="memberDAO" />
+	</bean>
+	<bean id="memberSelectService"
+		class="ch04_pjt_exam01.ems.member.service.MemberSelectService">
+		<constructor-arg ref="memberDAO" />	
+	</bean>
+	<bean id="memberAllSelectService"
+		class="ch04_pjt_exam01.ems.member.service.MemberAllSelectService">
+		<constructor-arg ref="memberDAO" />
+	</bean>
+	<bean id="printMemberInformationService"
+		class="ch04_pjt_exam01.ems.member.service.PrintMemberInformationService">
+		<constructor-arg ref="memberAllSelectService" />
+	</bean>
+	<bean id="dev_DBConnectionInfoDev"
+		class="ch04_pjt_exam01.ems.member.DBConnectionInfo">
+		<property name="url" value="000.000.000.000"/>
+		<property name="userId" value="admin" />
+		<property name="userPw" value="0000" />		
+	</bean>
+	<bean id="real_DBConnectionInfo"
+		class="ch04_pjt_exam01.ems.member.DBConnectionInfo">
+		<property name="url" value="111.111.111.111" />
+		<property name="userId" value="master" />
+		<property name="userPw" value="1111" />
+	</bean>
+	<bean id="EMSInformationService"
+		class="ch04_pjt_exam01.ems.member.service.EMSInformationService">
+		<property name="info">
+			<value>Education Management System program was developed in 2022.</value>
+		</property>
+		<property name="copyRight"
+			value="COPYRIGHT(C) 2022 EMS CO.LTD.ALL RIGHT RESERVED.CONTACT MASTER FOR MORE INFORMATION." />
+		<property name="ver" value="The version is 1.0" />
+		<property name="sYear" value="2022" />
+		<property name="sMonth" value="3" />
+		<property name="sDay" value="4" />
+		<property name="eYear" value="2022" />
+		<property name="eMonth" value="4" />
+		<property name="eDay" value="30" />
+	</bean>
+</beans>
