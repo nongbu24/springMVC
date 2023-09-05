@@ -1,7 +1,7 @@
 package ch04_pjt_exam01.ems.member.service;
 
-import ch04_pjt_exam01.ems.member.Member;
 import ch04_pjt_exam01.ems.member.dao.MemberDAO;
+import ch04_pjt_exam01.ems.member.dao.MemberDO;
 
 public class MemberDeleteService {
 	private MemberDAO memberDao;
@@ -10,16 +10,17 @@ public class MemberDeleteService {
 		this.memberDao = memberDao;
 	}
 	
-	public void delete(String mNum) {
-		if(verify(mNum)) {
-			memberDao.delete(mNum);
+	public void delete(String id) {
+		if(verify(id)) {
+			memberDao.delete(id);
 		} else {
-			System.out.println("Member Information is unavailable");
+			System.out.println("Member information is unavailable");
 		}
 	}
 	
-	public boolean verify(String mNum) {
-		Member member = memberDao.select(mNum);
-		return member != null ? true : false;
+	public boolean verify(String id) {
+		MemberDO memberDo = memberDao.select(id);
+		return memberDo != null ? true : false;
 	}
+	
 }

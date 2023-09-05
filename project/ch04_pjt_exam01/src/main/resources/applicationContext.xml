@@ -6,37 +6,32 @@
 	
 	<bean id="initSampleData"
 		class="ch04_pjt_exam01.ems.utils.InitSampleData">
-		<property name="mNums">
-			<array>
-				<value>pjw0001</value>
-			</array>
-		</property>
-		<property name="mIds">
+		<property name="ids">
 			<array>
 				<value>dragon</value>
 			</array>
 		</property>
-		<property name="mPws">
+		<property name="passwords">
 			<array>
 				<value>p0001</value>
 			</array>
 		</property>
-		<property name="mHps">
+		<property name="contacts">
 			<array>
 				<value>010-8888-8888</value>
 			</array>
 		</property>
-		<property name="mEmails">
+		<property name="emails">
 			<array>
 				<value>pop@naver.org</value>
 			</array>
 		</property>
-		<property name="newDate">
+		<property name="registeredDates">
 			<array>
 				<value>2023-05-03</value>
 			</array>
 		</property>
-		<property name="lastDate">
+		<property name="modifiedDates">
 			<array>
 				<value>2023-09-05</value>
 			</array>
@@ -79,20 +74,5 @@
 		<property name="url" value="111.111.111.111" />
 		<property name="userId" value="master" />
 		<property name="userPw" value="1111" />
-	</bean>
-	<bean id="EMSInformationService"
-		class="ch04_pjt_exam01.ems.member.service.EMSInformationService">
-		<property name="info">
-			<value>Education Management System program was developed in 2022.</value>
-		</property>
-		<property name="copyRight"
-			value="COPYRIGHT(C) 2022 EMS CO.LTD.ALL RIGHT RESERVED.CONTACT MASTER FOR MORE INFORMATION." />
-		<property name="ver" value="The version is 1.0" />
-		<property name="sYear" value="2022" />
-		<property name="sMonth" value="3" />
-		<property name="sDay" value="4" />
-		<property name="eYear" value="2022" />
-		<property name="eMonth" value="4" />
-		<property name="eDay" value="30" />
 	</bean>
 </beans>

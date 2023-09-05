@@ -1,55 +1,61 @@
 package ch04_pjt_exam01.ems.utils;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class InitSampleData {
-	private String[] mNums;
-	private String[] mIds;
-	private String[] mPws;
-	private String[] mHps;
-	private String[] mEmails;
-	private String[] newDate;
-	private String[] lastDate;
-	public String[] getmNums() {
-		return mNums;
+	private String[] ids;
+	private String[] passwords;
+	private String[] contacts;
+	private String[] emails;
+	private LocalDateTime[] registeredDates;
+	private LocalDateTime[] modifiedDates;
+	
+	public String[] getIds() {
+		return ids;
 	}
-	public void setmNums(String[] mNums) {
-		this.mNums = mNums;
+	
+	public void setIds(String[] ids) {
+		this.ids = ids;
 	}
-	public String[] getmIds() {
-		return mIds;
+	
+	public String[] getPasswords() {
+		return passwords;
 	}
-	public void setmIds(String[] mIds) {
-		this.mIds = mIds;
+	
+	public void setPasswords(String[] passwords) {
+		this.passwords = passwords;
 	}
-	public String[] getmPws() {
-		return mPws;
+	
+	public String[] getContacts() {
+		return contacts;
 	}
-	public void setmPws(String[] mPws) {
-		this.mPws = mPws;
+	
+	public void setContacts(String[] contacts) {
+		this.contacts = contacts;
 	}
-	public String[] getmHps() {
-		return mHps;
+	
+	public String[] getEmails() {
+		return emails;
 	}
-	public void setmHps(String[] mHps) {
-		this.mHps = mHps;
+	
+	public void setEmails(String[] emails) {
+		this.emails = emails;
 	}
-	public String[] getmEmails() {
-		return mEmails;
+	
+	public LocalDateTime[] getRegisteredDates() {
+		return registeredDates;
 	}
-	public void setmEmails(String[] mEmails) {
-		this.mEmails = mEmails;
+	
+	public void setRegisteredDates(LocalDateTime[] registeredDates) {
+		this.registeredDates = registeredDates;
 	}
-	public String[] getNewDate() {
-		return newDate;
+	
+	public LocalDateTime[] getModifiedDates() {
+		return modifiedDates;
 	}
-	public void setNewDate(String[] newDate) {
-		this.newDate = newDate;
+	
+	public void setModifiedDates(LocalDateTime[] modifiedDates) {
+		this.modifiedDates = modifiedDates;
 	}
-	public String[] getLastDate() {
-		return lastDate;
-	}
-	public void setLastDate(String[] lastDate) {
-		this.lastDate = lastDate;
-	}
+	
 }

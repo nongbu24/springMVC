@@ -1,7 +1,7 @@
 package ch04_pjt_exam01.ems.member.service;
 
-import ch04_pjt_exam01.ems.member.Member;
 import ch04_pjt_exam01.ems.member.dao.MemberDAO;
+import ch04_pjt_exam01.ems.member.dao.MemberDO;
 
 public class MemberSelectService {
 	private MemberDAO memberDao;
@@ -10,17 +10,18 @@ public class MemberSelectService {
 		this.memberDao = memberDao;
 	}
 	
-	public Member select(String mNum) {
-		if(verify(mNum)) {
-			return memberDao.select(mNum);
+	public MemberDO select(String id) {
+		if(verify(id)) {
+			return memberDao.select(id);
 		} else {
-			System.out.println("Member Information is available.");
+			System.out.println("Member information is available.");
 			return null;
 		}
 	}
 	
-	public boolean verify(String mNum) {
-		Member member = memberDao.select(mNum);
-		return member != null ? true : false;
+	public boolean verify(String id) {
+		MemberDO memberDo = memberDao.select(id);
+		return memberDo != null ? true : false;
 	}
+	
 }

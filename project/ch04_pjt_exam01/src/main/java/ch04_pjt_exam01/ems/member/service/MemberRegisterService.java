@@ -1,7 +1,7 @@
 package ch04_pjt_exam01.ems.member.service;
 
-import ch04_pjt_exam01.ems.member.Member;
 import ch04_pjt_exam01.ems.member.dao.MemberDAO;
+import ch04_pjt_exam01.ems.member.dao.MemberDO;
 
 public class MemberRegisterService {
 	private MemberDAO memberDao;
@@ -10,17 +10,18 @@ public class MemberRegisterService {
 		this.memberDao = memberDao;
 	}
 	
-	public void register(Member member) {
-		if(verify(member.getmNum())) {
-			memberDao.insert(member);
+	public void register(MemberDO memberDo) {
+		if(verify(memberDo.getId())) {
+			memberDao.insert(memberDo);
 		} else {
 			System.out.println("The Member has already been registered");
 		}
 	}
 	
-	public boolean verify(String mNum) {
-		Member member = memberDao.select(mNum);
+	public boolean verify(String id) {
+		MemberDO memberDo = memberDao.select(id);
 		
-		return member == null ? true : false;
+		return memberDo == null ? true : false;
 	}
+	
 }
